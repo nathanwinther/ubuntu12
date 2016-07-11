@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[ubuntu12]
+    attributes: {
+        ubuntu12: {
+            mysql: {
+                bind_address: "0.0.0.0",
+                max_allowed_packet: "64M",
+                root_password: "root",
+                remote_root: true
+            }
+        }
+    }

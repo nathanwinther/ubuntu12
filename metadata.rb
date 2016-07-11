@@ -1,0 +1,7 @@
+name 'ubuntu12'
+maintainer 'Nathan Winther'
+maintainer_email 'hello@nathanwinther.info'
+license 'all_rights'
+description 'Installs/Configures ubuntu12'
+long_description 'Installs/Configures ubuntu12'
+version '0.1.0'
