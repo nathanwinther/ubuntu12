@@ -66,23 +66,6 @@ Standard Ubuntu apache2 with the following modules installed and enabled:
 * mod_rewrite
 * mod_ssl
 
-Vagrant config
-
-````
-Vagrant.configure(2) do |config|
-  config.vm.provision "chef_zero" do |chef|
-    chef.json = {
-      "ubuntu12" => {
-        "apache" => {
-          "run_user" => "www-data",
-          "run_group" => "www-data"
-        }
-      }
-    }
-  end
-end
-````
-
 ### PHP5
 
 Standard Ubuntu php5 with the following modules installed and enabled:
